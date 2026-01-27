@@ -14,7 +14,7 @@ FILE_PATHS = {
 }
 
 # ---------------------------------------------------------
-# 🔧 Core Logic Function (Reusable)
+#  Core Logic Function (Reusable)
 # ---------------------------------------------------------
 def process_efficiency_data():
     # 1️⃣ Load files
@@ -80,7 +80,7 @@ def process_efficiency_data():
 
 
 # ---------------------------------------------------------
-# 🚀 Streamlit ENTRY POINT
+#  Streamlit ENTRY POINT
 # ---------------------------------------------------------
 def run():
     st.subheader("📊 Efficiency Checker")

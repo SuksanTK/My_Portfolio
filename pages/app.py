@@ -1,40 +1,37 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+from projects import model_linebalance
+st.set_page_config(page_title="Web App & Model", layout="wide")
 def appstreamlit():
-    # ✅ ต้องอยู่บรรทัดแรกของ Streamlit app
-    st.set_page_config(page_title="IE Portfolio", layout="wide")
-
     # --- HEADER UI ---
     st.markdown("""
-    <div style="background-color: #AF7AC5; padding: 20px; border-radius: 5px; color: white; text-align: center;">
-        <h1>Industrial Engineering Portfolio</h1>
-        <p>Advanced Production & Quality Solutions</p>
+    <div style="background-color: #919292; padding: 20px; border-radius: 5px; color: white; text-align: center;">
+        <h1>Industrial Engineering Data Driven</h1>
+        <p>Web App and data management</p>
     </div>
     """, unsafe_allow_html=True)
 
     # --- NAVIGATION MENU ---
     selected = option_menu(
         menu_title=None,
-        options=["Home", "Check Efficiency", "Capacity Calc", "QueryData", "PDF-CSV"],
-        icons=["house", "bar-chart", "calculator", "search", "file-pdf"],
+        options=[ "Check Efficiency", "Capacity Calc", "QueryData", "PDF-CSV","Linebalance Model","SQL Code"],
+        icons=["bar-chart", "calculator", "search", "file-pdf"],
         orientation="horizontal"
     )
 
     # --- IMPORT PROJECTS ---
     from projects import (
-        home,
         efficiency_Checking,
         final_calculation,
         query_Layout_Raweff,
-        pdf_to_csv
+        pdf_to_csv,
+        model_linebalance,
+        begining_code
     )
 
     # --- ROUTER ---
-    if selected == "Home":
-        home.run()  # แนะนำให้ Home เป็น function ด้วย
-
-    elif selected == "Check Efficiency":
+    if selected == "Check Efficiency":
         efficiency_Checking.run()
 
     elif selected == "Capacity Calc":
@@ -45,3 +42,10 @@ def appstreamlit():
 
     elif selected == "PDF-CSV":
         pdf_to_csv.main()
+        
+    elif selected == "Linebalance Model":
+        model_linebalance.linebalance()
+        
+    elif selected == "SQL Code":
+        begining_code.sqlcode()
+
