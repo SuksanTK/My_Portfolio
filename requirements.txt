@@ -4,3 +4,4 @@ plotly
 streamlit-option-menu
 pdfplumber
 numpy
+streamlit_pdf_viewer
