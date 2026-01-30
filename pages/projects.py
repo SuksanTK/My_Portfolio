@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from streamlit_pdf_viewer import pdf_viewer
 st.set_page_config(page_title="IE Project", layout="wide")
 def project_ie():
     with st.expander("Happy Workplace Initiative"):
@@ -73,3 +74,36 @@ def project_ie():
         - Reduced daily line balance adjustment time from ~2 hours to ~15 minutes.
         - Allowed IE teams to spend more time on on‑site improvement and problem‑solving.
    """)
+    st.header("📜 My Certificates")
+
+    # -------------------------------
+    # Row 1
+    # -------------------------------
+    with st.container():
+        col1, col2 = st.columns(2)
+
+        # Certificate 1
+        with col1.expander("Data Science Bootcamp – Datarockie", expanded=False):
+            st.subheader("Data Science Bootcamp – Datarockie")
+            pdf_viewer("certificate-of-completion-for-data-science-bootcamp-12.pdf")
+
+        # Certificate 2
+        with col2.expander("Data Science Bootcamp – Udemy", expanded=False):
+            st.subheader("Data Science Bootcamp – Udemy")
+            pdf_viewer("Data Science Course udemy.pdf")
+
+    # -------------------------------
+    # Row 2
+    # -------------------------------
+    with st.container():
+        col1, col2 = st.columns(2)
+
+        # Certificate 3
+        with col1.expander("Basic Python Certificate", expanded=False):
+            st.subheader("Basic Python Certificate")
+            pdf_viewer("python-certificate.pdf")
+
+        # Certificate 4 (Image)
+        with col2.expander("Additional Certificate", expanded=False):
+            st.subheader("Additional Certificate")
+            st.image("Gsd certificate.jpg", use_container_width=True)

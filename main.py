@@ -50,7 +50,7 @@ with st.sidebar:
     st.markdown(logo_html, unsafe_allow_html=True)
     nav_tab_op = option_menu(
         menu_title="Suksan Tuaklang",
-        options=["About Me", "Experience","Resume","Web App & Model", "IE Project"],
+        options=["About Me", "Experience","Resume","Web App & Model", "Project & Certificate"],
         icons=['person-fill', 'file-text', 'file-text', 'briefcase', 'folder', 'envelope'],
         default_index=0,
     )
@@ -63,7 +63,7 @@ elif nav_tab_op == "Experience":
     expjob.exp()
 elif nav_tab_op == "Web App & Model":
     app.appstreamlit()
-elif nav_tab_op == "IE Project":
+elif nav_tab_op == "Project & Certificate":
     projects.project_ie()
     
 with st.sidebar:
