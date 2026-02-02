@@ -16,7 +16,6 @@ def resume():
             </style>
             """, unsafe_allow_html=True)
 
-
     st.download_button(
                 label="Download Resume",
                 key="download_button",

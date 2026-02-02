@@ -24,7 +24,7 @@ def get_base64_image(path):
     with open(path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-logo_base64 = get_base64_image("images/P3.jpg")
+logo_base64 = get_base64_image("profilenormal.png")
 
 logo_html = f"""
 <style>
@@ -34,8 +34,8 @@ logo_html = f"""
     margin-bottom: 20px;
 }}
 .logo {{
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -50,8 +50,8 @@ with st.sidebar:
     st.markdown(logo_html, unsafe_allow_html=True)
     nav_tab_op = option_menu(
         menu_title="Suksan Tuaklang",
-        options=["About Me", "Experience","Resume","Web App & Model", "Project & Certificate"],
-        icons=['person-fill', 'file-text', 'file-text', 'briefcase', 'folder', 'envelope'],
+        options=["About Me","Resume","Experience","Web App & Model", "Project & Certificate"],
+        icons=['person-fill', 'file-text', 'briefcase', 'archive', 'folder'],
         default_index=0,
     )
 
