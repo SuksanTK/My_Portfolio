@@ -28,4 +28,4 @@ def detailperson():
     I see myself as a bridge between operations and data—an Industrial Engineer who understands people, processes, and systems, and who believes that meaningful improvement comes from combining shop-floor experience with analytical thinking. My goal is to continue growing as a Data-Driven Industrial Engineer, contributing to smarter, more efficient, and sustainable manufacturing environments.
             """
         )
-        col2.image("images/P6.jpg", use_container_width=True)
+        # col2.image("images/P6.jpg", use_container_width=True)
