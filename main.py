@@ -72,6 +72,6 @@ with st.sidebar:
     [GitHub](https://github.com/SuksanTK) | 
     [Email](flukzaza1551@gmail.com) |
     [Facebook](https://www.facebook.com/share/19aFS1dN5f/?mibextid=wwXIfr)|
-    [Instagram](https://www.instagram.com/suksantk?igsh=MXRrdmRoZzVubjg2Zw%3D%3D&utm_source=qr)
+    [Instagram](https://www.instagram.com/suksantk?igsh=MXRrdmRoZzVubjg2Zw%3D%3D&utm_source=qr)|
     """)
     st.markdown("- **Tell:** 0837365492")
