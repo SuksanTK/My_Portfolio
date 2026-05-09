@@ -1,83 +1,134 @@
 import streamlit as st
-# --- Experience Section ---
-st.set_page_config(page_title="Experience", layout="wide")
-def exp():
-   st.header("My Experience")
-   with st.container():
-        col1,col2 = st.columns([4,1])
-        col1.markdown("""
-           ### Industrail Engineer –– HBI Manufacturing (Thailand) Co. ltd (April 2024- April 2026)
-           ##### Industrial Engineer  
-           Worked as a hands-on Industrial Engineer responsible for improving production efficiency, manpower utilization, and line performance in a garment manufacturing environment. Acted as a key link between production operations, quality, planning, and data analytics teams. Specialized in line balancing, work measurement, manpower planning, and on-floor problem solving, while increasingly driving decisions through real-time data analysis, automation, and digital IE solutions. This role combined strong shop-floor experience with data-driven thinking to support sustainable manufacturing performance improvement.
-           ##### 1.Line Balancing & Production Setup
-           - Conducted line balancing for new styles, including construction analysis, method study, issue identification, and critical operation analysis in collaboration with the NSI team.
-           - Managed line balancing for existing styles, including layout arrangement, headcount preparation, operator retraining, skill testing, and training for new operators.
-           - Shared weekly line balance updates for new styles, line conversions, and critical styles with cross-functional teams (Production, IE, and Planning).
-           - Performed daily efficiency (%Eff) tracking, monitor line performance and identify improvement opportunities.
-           ##### 2.Manpower & Operator Management
-           - Adjusted manpower levels (adding/reducing operators) for lines not meeting line balance targets or experiencing operational issues, in coordination with supervisors and attendance control.
-           - Rebalanced production lines following manpower adjustments to ensure optimal capacity utilization. Maintained and updated Skill Matrix and Efficiency Matrix for operators. 
-           - Focused on improving performance of low-efficiency individual operators through targeted analysis and support. 
-           - Updated headcount (HC) data on a weekly basis. and plan to request a manpoer to HR. 
-           - Planned and executed multi-skill training programs, including monitoring efficiency improvement and supporting new style and line conversion training. 
-           ##### 3.On-floor Problem Solving & Quality Support
-           - Conducted time studies (T/T) on production lines with existing or potential performance issues. 
-           - Performed Gemba walks to observe actual production conditions, identify root causes, and implement corrective actions. 
-           - Supported quality problem analysis by performing preliminary investigations based on 4M (Man, Machine, Method, Material) and coordinating with relevant departments for further action.           
-           ##### Data-Driven Industrial Engineering & Analytics Support
-           Worked as a data-focused Industrial Engineer, acting as a bridge between production operations, analytics, and digital systems. Responsible for transforming real-time factory data into actionable insights for operational improvement and management decision-making.
-           - Analyzed real-time production data from manufacturing systems to identify efficiency gaps, performance trends, and improvement opportunities.
-           - Processed and cleaned raw system data to generate structured reports and analytical summaries for management and relevant stakeholders.
-           - Validated and monitored real-time data accuracy, identified data inconsistencies or system defects, and communicated findings to development (Dev) teams for system improvement.
-           - Collaborated with the Analytics team to design and develop a line balancing forecasting model based on real-time production inputs, significantly reducing manual line balancing effort by IE teams.
-           - Developed data extraction logic to support factory operational needs, including:Employee attendance scan-in/scan-out vs. actual working start time, Non-productive time analysis (e.g. restroom breaks, idle gaps), Downtime gaps and work interruption patterns during the production day.
-           - Served as a factory data analyst, translating manufacturing data into insights for production, IE, and management teams.
-           - Began implementing Python and SQL solutions to automate data extraction, analysis, and IE reporting processes.
-           """)
-        # col2.markdown(""" 
-        # **Tools:**
-        
-        # - Programming Languages: Python, R, SQL
-        # - Machine Learning: Scikit-Learn, TensorFlow, PyTorch, Auto ML
-        # - Data Visualization: Matplotlib, Seaborn, Plotly
-        # - Big Data Technologies: Azure Databricks, Spark
-        # - ETL Processes: Azure Data Factory
-        # - Generative AI: LLM, Langchain
-        # - Other Tools: Git, Jupyter Notebooks, streamlit  """)
-        
-        col1.markdown("""
-           ### Internship –– HBI Manufacturing (Thailand) Co. ltd (November 2023 March 2024)
-           Supported Industrial Engineering projects with a focus on productivity improvement and data-driven analysis. Worked closely with senior Industrial Engineers to apply IE principles in real production environments. Actively involved in data collection, testing, and feedback processes for automation and line balancing initiatives, developing a strong understanding of IE logic, problem-solving methodologies, and the integration of data into manufacturing decision-making.
-           - **Support Project Auto line balance** keep data for the project auto line balance for automation production line balance. 
-           - **Project improvement** take a project from senior IE to improve small production line by IE logic.
-           - **test and feedback** brainstrom the logic auto line balance for the production line.
-           """)
-        # col2.markdown(""" 
-        # **Tools:**
-        
-        # - Programming Languages: Python, R, SQL
-        # - Machine Learning: Scikit-Learn, TensorFlow, PyTorch, Auto ML
-        # - Data Visualization: Matplotlib, Seaborn, Plotly
-        # - Big Data Technologies: Azure Databricks, Spark
-        # - ETL Processes: Azure Data Factory
-        # - Generative AI: LLM, Langchain
-        # - Other Tools: Git, Jupyter Notebooks, streamlit  """)        
 
-        col1.markdown("""
-           ### Quality Control –– HBI Manufacturing (Thailand) Co. ltd (May 2018- May 2020)
-           Worked as a Quality Control professional responsible for ensuring product quality and compliance throughout the final stages of the manufacturing process. Gained strong hands-on experience in defect detection, quality standards, and shipment readiness in a high-volume production environment. This role built a solid foundation in quality awareness, process discipline, and attention to detail, which later supported continuous improvement and Industrial Engineering activities.
-           - **End-Line Quality Control (End-Line QC)** Responsible for inspecting finished products at the end of the production line to identify defects and non-conformities. Ensured products met defined quality standards and production specifications before proceeding to the next stage.
-           - **Outgoing Quality Inspection (AQL)** Performed outgoing quality inspections based on AQL standards prior to shipment to customers. Conducted lot-by-lot inspections and prepared quality inspection reports to confirm compliance with customer and company requirements.
-           - **Final Audit** Conducted final quality audits as the last quality control step before container loading and shipment. Verified overall product quality, packaging, and documentation, and prepared final audit reports for communication with relevant internal departments.
-           """)
-        # col2.markdown(""" 
-        # **Tools:**
-        
-        # - Programming Languages: Python, R, SQL
-        # - Machine Learning: Scikit-Learn, TensorFlow, PyTorch, Auto ML
-        # - Data Visualization: Matplotlib, Seaborn, Plotly
-        # - Big Data Technologies: Azure Databricks, Spark
-        # - ETL Processes: Azure Data Factory
-        # - Generative AI: LLM, Langchain
-        # - Other Tools: Git, Jupyter Notebooks, streamlit  """)
-        
+
+def exp():
+    st.markdown('<p class="section-header">Experience</p><div class="section-divider"></div>', unsafe_allow_html=True)
+
+    # ---- JOB 1: IE ----
+    st.markdown("""
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">April 2024 – April 2026</p>
+        <p class="timeline-title">Industrial Engineer</p>
+        <p class="timeline-company">HBI Manufacturing (Thailand) Co., Ltd.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    with st.expander("1 · Line Balancing & Production Setup", expanded=False):
+        st.markdown("""
+        <div class="card" style="margin-bottom:0;">
+        <ul style="margin:0; padding-left:1.2rem; color:#374151; font-size:0.9rem; line-height:1.8;">
+            <li>Conducted line balancing for new styles — construction analysis, method study, issue identification, and critical operation analysis in collaboration with the NSI team.</li>
+            <li>Managed line balancing for existing styles — layout arrangement, headcount preparation, operator retraining, skill testing, and new operator training.</li>
+            <li>Shared weekly line balance updates for new styles, line conversions, and critical styles with cross-functional teams (Production, IE, Planning).</li>
+            <li>Performed daily efficiency (%Eff) tracking, monitored line performance, and identified improvement opportunities.</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with st.expander("2 · Manpower & Operator Management", expanded=False):
+        st.markdown("""
+        <div class="card" style="margin-bottom:0;">
+        <ul style="margin:0; padding-left:1.2rem; color:#374151; font-size:0.9rem; line-height:1.8;">
+            <li>Adjusted manpower levels for lines not meeting line balance targets, in coordination with supervisors and attendance control.</li>
+            <li>Rebalanced production lines following manpower adjustments to ensure optimal capacity utilization.</li>
+            <li>Maintained and updated Skill Matrix and Efficiency Matrix for operators.</li>
+            <li>Focused on improving performance of low-efficiency operators through targeted analysis and support.</li>
+            <li>Planned and executed multi-skill training programs, monitoring efficiency improvement and supporting new style training.</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with st.expander("3 · On-floor Problem Solving & Quality Support", expanded=False):
+        st.markdown("""
+        <div class="card" style="margin-bottom:0;">
+        <ul style="margin:0; padding-left:1.2rem; color:#374151; font-size:0.9rem; line-height:1.8;">
+            <li>Conducted time studies (T/T) on production lines with existing or potential performance issues.</li>
+            <li>Performed Gemba walks to observe actual production conditions, identify root causes, and implement corrective actions.</li>
+            <li>Supported quality problem analysis using 4M framework (Man, Machine, Method, Material).</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with st.expander("4 · Data-Driven IE & Analytics Support", expanded=False):
+        st.markdown("""
+        <div class="card" style="margin-bottom:0;">
+        <ul style="margin:0; padding-left:1.2rem; color:#374151; font-size:0.9rem; line-height:1.8;">
+            <li>Analyzed real-time production data to identify efficiency gaps, performance trends, and improvement opportunities.</li>
+            <li>Processed and cleaned raw system data to generate structured reports and analytical summaries for management.</li>
+            <li>Validated and monitored real-time data accuracy; communicated findings to development teams for system improvement.</li>
+            <li>Collaborated with Analytics team to design a line balancing forecasting model, significantly reducing manual effort.</li>
+            <li>Developed data extraction logic for: employee scan-in/scan-out vs. actual working time, non-productive time analysis, and downtime gap patterns.</li>
+            <li>Began implementing <strong>Python and SQL</strong> solutions to automate data extraction, analysis, and IE reporting.</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("<div style='margin-bottom:0.5rem;'></div>", unsafe_allow_html=True)
+
+    # ---- JOB 2: Internship ----
+    st.markdown("""
+    <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">November 2023 – March 2024</p>
+        <p class="timeline-title">Industrial Engineering Intern</p>
+        <p class="timeline-company">HBI Manufacturing (Thailand) Co., Ltd.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    with st.expander("Internship Responsibilities", expanded=False):
+        st.markdown("""
+        <div class="card" style="margin-bottom:0;">
+        <p style="color:#374151; font-size:0.9rem; line-height:1.7; margin-bottom:0.75rem;">
+        Supported IE projects with a focus on productivity improvement and data-driven analysis.
+        Worked closely with senior IEs to apply IE principles in real production environments.
+        </p>
+        <ul style="margin:0; padding-left:1.2rem; color:#374151; font-size:0.9rem; line-height:1.8;">
+            <li><strong>Auto Line Balance Support:</strong> Collected data for the auto line balance automation project.</li>
+            <li><strong>Process Improvement:</strong> Took a project from senior IE to improve a small production line using IE logic.</li>
+            <li><strong>Testing & Feedback:</strong> Brainstormed and tested logic for the auto line balance system.</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("<div style='margin-bottom:0.5rem;'></div>", unsafe_allow_html=True)
+
+    # ---- JOB 3: QC ----
+    st.markdown("""
+    <div class="timeline-item" style="border-left-color:#D1D5DB;">
+        <div class="timeline-dot" style="background:#9CA3AF; box-shadow:0 0 0 2px #9CA3AF;"></div>
+        <p class="timeline-date">May 2018 – May 2020</p>
+        <p class="timeline-title">Quality Control</p>
+        <p class="timeline-company">HBI Manufacturing (Thailand) Co., Ltd.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    with st.expander("QC Responsibilities", expanded=False):
+        st.markdown("""
+        <div class="card" style="margin-bottom:0;">
+        <p style="color:#374151; font-size:0.9rem; line-height:1.7; margin-bottom:0.75rem;">
+        Ensured product quality and compliance throughout the final stages of manufacturing.
+        Built a strong foundation in quality awareness and process discipline.
+        </p>
+        <ul style="margin:0; padding-left:1.2rem; color:#374151; font-size:0.9rem; line-height:1.8;">
+            <li><strong>End-Line QC:</strong> Inspected finished products at the end of the production line to identify defects.</li>
+            <li><strong>Outgoing Quality Inspection (AQL):</strong> Performed lot-by-lot inspections per AQL standards prior to shipment.</li>
+            <li><strong>Final Audit:</strong> Conducted final quality audits before container loading; prepared audit reports for internal departments.</li>
+        </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # ---- KEY TOOLS ----
+    st.markdown("<div style='margin-top:2rem;'></div>", unsafe_allow_html=True)
+    st.markdown('<p class="section-header" style="font-size:1.1rem;">Tools Used</p>', unsafe_allow_html=True)
+    st.markdown("""
+    <div style="margin-top:0.5rem;">
+        <span class="badge">Python</span>
+        <span class="badge">SQL</span>
+        <span class="badge">Streamlit</span>
+        <span class="badge badge-gray">Excel</span>
+        <span class="badge badge-gray">Power BI</span>
+        <span class="badge badge-gray">Line Balancing Software</span>
+        <span class="badge badge-gray">Time Study Tools</span>
+    </div>
+    """, unsafe_allow_html=True)

@@ -1,61 +1,53 @@
 import streamlit as st
 from streamlit_pdf_viewer import pdf_viewer
 
-st.set_page_config(page_title="My Resume", layout="wide")
 
 def resume():
 
-    # resume english
-    with open("Suksan Tuaklang IE Resume.pdf", "rb") as pdf_file:
-        document_full = pdf_file.read()
-
-    # Resume ไทย
-    with open("Suksan Tuaklang IE Resume2.pdf", "rb") as pdf_file:
-        document_short = pdf_file.read()
+    st.markdown('<p class="section-header">Resume</p><div class="section-divider"></div>', unsafe_allow_html=True)
 
     st.markdown("""
-        <style>
-        .stDownloadButton button {
-            background-color: #1E9E35 !important;
-            color: white !important;
-        }
-        </style>
-        """, unsafe_allow_html=True)
+    <p style="color:#6B7280; font-size:0.9rem; margin-bottom:1.5rem;">
+    Download my resume in English or Thai, or preview it below.
+    </p>
+    """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns(2)
+    # ---- DOWNLOAD BUTTONS ----
+    try:
+        with open("Suksan Tuaklang IE Resume.pdf", "rb") as f:
+            doc_eng = f.read()
+        with open("Suksan Tuaklang IE Resume2.pdf", "rb") as f:
+            doc_thai = f.read()
 
-    # resume english
-    with col1:
-        st.download_button(
-            label="Download Resume(Eng)",
-            key="download_Eng",
-            file_name="Suksan Tuaklang IE Resume.pdf",
-            data=document_full,
-            help="Download Eng version.",
-        )
+        col1, col2, col_spacer = st.columns([1, 1, 3])
+        with col1:
+            st.download_button(
+                label="⬇️  Download (English)",
+                key="download_Eng",
+                file_name="Suksan Tuaklang IE Resume.pdf",
+                data=doc_eng,
+                help="Download English version.",
+            )
+        with col2:
+            st.download_button(
+                label="⬇️  Download (Thai)",
+                key="download_thai",
+                file_name="Suksan Tuaklang IE Resume2.pdf",
+                data=doc_thai,
+                help="Download Thai version.",
+            )
+    except FileNotFoundError:
+        st.warning("Resume files not found.")
 
-    #Resume ไทย
-    with col2:
-        st.download_button(
-            label="Download Resume(thai)",
-            key="download_thai",
-            file_name="Suksan Tuaklang IE Resume2.pdf",
-            data=document_short,
-            help="Download Thai version.",
-        )
+    st.markdown("<div style='margin-top:1.5rem;'></div>", unsafe_allow_html=True)
 
-    # แสดง preview ไฟล์หลัก
-    with st.container():
-        st.markdown(
-            """
-            <style>
-            .stContainer > div {
-                width: 55%;
-                margin: auto;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
+    # ---- PDF PREVIEW ----
+    st.markdown("""
+    <p style="font-size:0.88rem; color:#9CA3AF; font-weight:500; text-transform:uppercase;
+              letter-spacing:0.5px; margin-bottom:0.5rem;">Preview · English Version</p>
+    """, unsafe_allow_html=True)
 
+    try:
         pdf_viewer("Suksan Tuaklang IE Resume.pdf")
+    except Exception:
+        st.info("PDF preview unavailable.")
