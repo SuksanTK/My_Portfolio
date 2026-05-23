@@ -20,6 +20,104 @@ st.markdown("""
 /* ===== BASE ===== */
 html, body, [class*="css"] {
     font-family: 'Inter', sans-serif;
+    color: #111827;
+}
+
+/* ===== FORCE LIGHT BACKGROUND ===== */
+.stApp {
+    background-color: #FFFFFF !important;
+}
+[data-testid="stAppViewContainer"] {
+    background-color: #FFFFFF !important;
+}
+[data-testid="stHeader"] {
+    background-color: #FFFFFF !important;
+}
+.main .block-container {
+    background-color: #FFFFFF !important;
+}
+
+/* ===== FORCE TEXT COLORS ===== */
+p, span, div, li, ul, ol, h1, h2, h3, h4, h5, h6, label {
+    color: inherit;
+}
+.stMarkdown, .stMarkdown p, .stMarkdown span {
+    color: #374151 !important;
+}
+.stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+    color: #111827 !important;
+}
+
+/* ===== STREAMLIT NATIVE ELEMENTS ===== */
+.stSelectbox label, .stTextInput label, .stTextArea label,
+.stNumberInput label, .stSlider label, .stCheckbox label,
+.stRadio label, .stMultiSelect label {
+    color: #374151 !important;
+    font-weight: 500 !important;
+}
+.stSelectbox [data-testid="stWidgetLabel"] > p,
+.stTextInput [data-testid="stWidgetLabel"] > p {
+    color: #374151 !important;
+}
+
+/* ===== EXPANDER ===== */
+[data-testid="stExpander"] {
+    border: 1px solid #E5E7EB !important;
+    border-radius: 8px !important;
+    background: #FFFFFF !important;
+}
+[data-testid="stExpander"] summary {
+    color: #111827 !important;
+    background: #FFFFFF !important;
+}
+[data-testid="stExpander"] summary:hover {
+    background: #F9FAFB !important;
+}
+[data-testid="stExpander"] > div > div {
+    background: #FFFFFF !important;
+}
+
+/* ===== DATAFRAME / TABLE ===== */
+[data-testid="stDataFrame"] {
+    background: #FFFFFF !important;
+}
+
+/* ===== INPUT WIDGETS ===== */
+.stTextInput input, .stTextArea textarea, .stNumberInput input {
+    background-color: #F9FAFB !important;
+    color: #111827 !important;
+    border: 1px solid #D1D5DB !important;
+    border-radius: 8px !important;
+}
+.stSelectbox [data-baseweb="select"] > div {
+    background-color: #F9FAFB !important;
+    border: 1px solid #D1D5DB !important;
+    color: #111827 !important;
+}
+
+/* ===== TABS ===== */
+[data-testid="stTabs"] [data-baseweb="tab-list"] {
+    background-color: #FFFFFF !important;
+}
+[data-testid="stTabs"] [data-baseweb="tab"] {
+    color: #6B7280 !important;
+}
+[data-testid="stTabs"] [aria-selected="true"] {
+    color: #2563EB !important;
+}
+
+/* ===== INFO / SUCCESS / WARNING / ERROR BOXES ===== */
+[data-testid="stAlert"] {
+    background-color: #F9FAFB !important;
+    color: #374151 !important;
+}
+
+/* ===== METRIC ===== */
+[data-testid="stMetric"] label {
+    color: #6B7280 !important;
+}
+[data-testid="stMetric"] [data-testid="stMetricValue"] {
+    color: #111827 !important;
 }
 
 /* ===== HIDE DEFAULT STREAMLIT NAV ===== */

@@ -5,10 +5,15 @@ from projects import model_linebalance
 st.set_page_config(page_title="Web App & Model", layout="wide")
 def appstreamlit():
     # --- HEADER UI ---
+    st.markdown('<p class="section-header">Web App & Model</p><div class="section-divider"></div>', unsafe_allow_html=True)
     st.markdown("""
-    <div style="background-color: #919292; padding: 20px; border-radius: 5px; color: white; text-align: center;">
-        <h1>Industrial Engineering Data Driven</h1>
-        <p>Web App and data management</p>
+    <div style="background: #F8FAFF; border: 1px solid #DBEAFE; border-radius: 10px;
+                padding: 1.25rem 1.5rem; margin-bottom: 1.5rem;">
+        <p style="color: #1D4ED8; font-size: 0.88rem; font-weight: 600; margin: 0 0 4px 0;
+                  text-transform: uppercase; letter-spacing: 0.5px;">Industrial Engineering</p>
+        <p style="color: #374151; font-size: 0.9rem; margin: 0;">
+            Web App and data management tools for IE workflows
+        </p>
     </div>
     """, unsafe_allow_html=True)
 
